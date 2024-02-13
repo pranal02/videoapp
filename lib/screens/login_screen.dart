@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:videoapp/widgets/custom_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -11,15 +12,26 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Text('Start or Join a Meeting',
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            'Start or Join a Meeting',
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
-            ))
-      ],
-    ));
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 38.0),
+            child: Image.asset('assets/images/onboarding.jpg'),
+          ),
+          CustomButton(
+            text: 'Google Sign In',
+            onPressed: () {},
+          ),
+        ],
+      ),
+    );
   }
 }

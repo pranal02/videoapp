@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:videoapp/screens/home_screen.dart';
 import 'package:videoapp/screens/login_screen.dart';
 import 'package:videoapp/utils/colors.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/login': (context) => const LoginScreen(),
+        '/home': (context) => const HomeScreen(),
       },
       home: const LoginScreen(),
     );
